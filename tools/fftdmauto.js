@@ -9,7 +9,7 @@ const { chalk, inquirer, _, fs, instagram, print, delay } = require("./index.js"
    ▐█▌·▐█▌.▐▌▐█▌.▐▌▐█▌▐▌▐█▄▪▐█▐█▌▐█▄▪▐█
    ▀▀▀  ▀█▄▀▪ ▀█▄▀▪.▀▀▀  ▀▀▀▀ ▀▀▀·▀▀▀▀  
 
-  Ξ TITLE  : Folow Like Direct Message (Followers Target)
+  Ξ TITLE  : Like Direct Message (dm Target)
   Ξ NOTE   : Only Single Target, for More use [BETA]
   Ξ UPDATE : Wednesday, August 4, 2021 (GMT+8)
            : TESTED "OK" BUG? YouTellMe!
@@ -67,7 +67,7 @@ const { chalk, inquirer, _, fs, instagram, print, delay } = require("./index.js"
         if (!info.is_private) {
             print(`@${target} (User ID: ${id}) => Followers: ${info.follower_count}, Following: ${info.following_count}`, "ok");
             print("Collecting followers . . .", "wait");
-            const targetFollowers = await ig.followersFeed(id);
+
             print(`Doing task with ratio ${perExec} target / ${delayTime} milliseconds \n`, "wait");
             do {
                 let items = await targetFollowers.items();
